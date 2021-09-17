@@ -13,10 +13,14 @@ Output: false
 **/
 
 var isPalindrome = function(x) {
-    revX=x.toFixed(0).split('').reverse().join('')-0;
+	/**  десятичные знаки после запятой отсутствуют x.toFixed()           
+	( .split('').reverse().join('')-0 )
+	из числа в массив . реверс . из массива в строку . и преврашаем в число ( -0 )
+	*/
+    revX=x.toFixed().split('').reverse().join('')-0;
     if (revX === x ){
         return true;
     }
     return false;
-
 };
+
